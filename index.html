@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Halal Nando’s UK Guide | Menu, Certified Branches & Options</title>
+  <meta name="description" content="Complete guide to Halal Nando’s in the UK – halal-certified PERi-PERi chicken, menu items, price ranges and how to find halal branches near you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --halal-dark: #1A2C2E;
+      --halal-green: #2B7A4B;
+      --halal-gold: #E0A82B;
+      --halal-cream: #FEFAF0;
+      --white: #FFFFFF;
+      --gray-100: #F5F7F5;
+      --gray-200: #E6EAE6;
+      --gray-700: #4A5A52;
+      --shadow-sm: 0 16px 28px -12px rgba(0,0,0,0.06);
+      --shadow-md: 0 24px 42px -14px rgba(0,0,0,0.1);
+      --shadow-hover: 0 32px 48px -20px rgba(0,0,0,0.18);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--halal-cream);
+      color: var(--halal-dark);
+      line-height: 1.55;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3.8vw, 2.9rem);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* header premium */
+    .site-header {
+      background: var(--halal-dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--halal-gold);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.9rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      border: none;
+    }
+    .logo-icon {
+      background: var(--halal-green);
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: white;
+    }
+    .logo-text span {
+      color: var(--halal-gold);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-links a:hover {
+      color: var(--halal-gold);
+      border-bottom-color: var(--halal-gold);
+    }
+
+    /* hero */
+    .hero {
+      background: linear-gradient(112deg, var(--halal-dark) 0%, #1C5A3A 100%);
+      color: white;
+      padding: 5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero:after {
+      content: '';
+      position: absolute;
+      bottom: -15%;
+      right: -5%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(224,168,43,0.2), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(224,168,43,0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(224,168,43,0.5);
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--halal-gold);
+    }
+    .hero-desc {
+      font-size: 1.2rem;
+      max-width: 620px;
+      opacity: 0.93;
+      margin: 1.3rem 0 2rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .stat .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--halal-gold);
+    }
+    .btn-primary, .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      transition: 0.25s;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--halal-gold);
+      color: var(--halal-dark);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .btn-primary:hover {
+      background: #f2bc54;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.5);
+      color: white;
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: white;
+    }
+
+    /* sections */
+    .section {
+      padding: 5rem 0;
+    }
+    .section-white {
+      background: var(--white);
+    }
+    .section-light {
+      background: var(--gray-100);
+    }
+    .eyebrow {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--halal-green);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .lead-text {
+      font-size: 1.2rem;
+      color: var(--gray-700);
+      margin: 1rem 0 1.2rem;
+    }
+    .inline-link {
+      font-weight: 800;
+      color: var(--halal-green);
+      border-bottom: 2px solid var(--halal-gold);
+      transition: 0.2s;
+    }
+    .inline-link:hover {
+      color: var(--halal-dark);
+      border-bottom-color: var(--halal-green);
+    }
+
+    /* card grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .info-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      transition: 0.3s;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .info-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--halal-green);
+      box-shadow: var(--shadow-hover);
+    }
+    .card-icon {
+      font-size: 2.2rem;
+      color: var(--halal-green);
+      margin-bottom: 1rem;
+    }
+
+    /* table style */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 28px;
+      background: white;
+      box-shadow: var(--shadow-sm);
+      margin: 2rem 0;
+    }
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .menu-table th {
+      background: var(--halal-dark);
+      color: white;
+      padding: 1rem 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: left;
+    }
+    .menu-table td {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--gray-200);
+      color: var(--halal-dark);
+      font-weight: 500;
+    }
+    .menu-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* popular list */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.8rem;
+      margin: 2rem 0;
+    }
+    .items-grid li {
+      list-style: none;
+      background: white;
+      padding: 0.7rem 1rem 0.7rem 2rem;
+      border-radius: 60px;
+      position: relative;
+      font-weight: 500;
+      border: 1px solid var(--gray-200);
+    }
+    .items-grid li:before {
+      content: "✓";
+      position: absolute;
+      left: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--halal-green);
+      font-weight: bold;
+    }
+
+    /* cta block */
+    .cta-halal {
+      background: linear-gradient(105deg, var(--halal-dark) 0%, #216B45 100%);
+      text-align: center;
+      padding: 4rem 2rem;
+      color: white;
+    }
+    .cta-halal h2 {
+      color: white;
+    }
+    .cta-halal .btn-primary {
+      margin-top: 1.2rem;
+    }
+
+    /* footer */
+    footer {
+      background: #12261F;
+      color: #C4D9CF;
+      padding: 3rem 2rem 1.5rem;
+      border-top: 5px solid var(--halal-gold);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    @media (max-width: 780px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+    .footer-col h4 {
+      color: white;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .footer-col a {
+      color: #C4D9CF;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      transition: 0.2s;
+      border: none;
+    }
+    .footer-col a:hover {
+      color: var(--halal-gold);
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-links a {
+      background: rgba(255,255,255,0.08);
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+      transition: 0.2s;
+      color: white;
+    }
+    .social-links a:hover {
+      background: var(--halal-gold);
+      color: var(--halal-dark);
+      transform: translateY(-2px);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+    }
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon"><i class="fas fa-certificate"></i></div>
+      <div class="logo-text">Hala<span>Nando</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#menu">Halal Menu</a></li>
+      <li><a href="#branches">Branches</a></li>
+      <li><a href="#faq">Info</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge"><i class="fas fa-pepper-hot"></i> HALAL · TRUSTED · FLAVOUR</div>
+      <h1>Halal Nando’s Guide UK: <em>Menu, Options & Everything Explained</em></h1>
+      <p class="hero-desc">Enjoy flame-grilled PERi-PERi chicken with halal-certified meat. Find halal Nando’s branches, full menu items, price ranges and everything you need for a worry-free meal.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#menu" class="btn-primary"><i class="fas fa-utensils"></i> Explore Halal Menu</a>
+        <a href="https://nandosmenus.uk/halal-branches/" target="_blank" rel="noopener" class="btn-outline"><i class="fas fa-location-dot"></i> Find halal nandos branches</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-value">Halal-certified</div><div>Selected UK locations</div></div>
+        <div class="stat"><div class="stat-value">Same PERi-PERi</div><div>Flame-grilled taste</div></div>
+        <div class="stat"><div class="stat-value">Full menu</div><div>Chicken, burgers, wraps, sides</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO + FIRST LINK (anchor "halal nandos" in the middle) -->
+  <section class="section section-white" id="overview">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-info-circle"></i> HALAL DINING AT NANDO’S</span>
+      <h2>What is <em>Halal Nando’s</em>?</h2>
+      <p class="lead-text">Halal Nando’s refers to specific UK branches that serve PERi-PERi chicken prepared according to Islamic dietary laws. The meat is sourced, processed and cooked under halal guidelines while preserving the signature flame-grilled taste. <strong>Find certified locations and full details:</strong> <a href="https://nandosmenus.uk/halal-branches/" target="_blank" rel="noopener" class="inline-link">halal nandos</a> – ensuring you dine confidently.</p>
+      <p>Not every Nando’s outlet is halal, but selected branches across major cities offer halal-certified chicken. The menu remains almost identical to regular Nando’s, with the same PERi-PERi sauces, spice levels, sides and desserts. This means Muslim customers can enjoy the authentic Nando’s experience without compromise.</p>
+    </div>
+  </section>
+
+  <!-- How to identify + features -->
+  <section class="section section-light">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-mosque"></i> FIND HALAL LOCATIONS</span>
+      <h2>How to identify halal Nando’s branches</h2>
+      <div class="card-grid">
+        <div class="info-card"><div class="card-icon"><i class="fas fa-check-circle"></i></div><h3>Official certification</h3><p>Halal branches are clearly marked and certified by recognised bodies. Staff can confirm status.</p></div>
+        <div class="info-card"><div class="card-icon"><i class="fas fa-map-marker-alt"></i></div><h3>Check online</h3><p>Use official Nando’s site or halal branch guides to verify before visiting.</p></div>
+        <div class="info-card"><div class="card-icon"><i class="fas fa-store"></i></div><h3>City availability</h3><p>Major cities like London, Birmingham, Manchester, Leeds have multiple halal branches.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Halal Nando’s Menu Overview + table -->
+  <section class="section section-white" id="menu">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-utensil-spoon"></i> HALAL MENU BREAKDOWN</span>
+      <h2>Halal Nando’s menu – same great taste, certified chicken</h2>
+      <div class="table-wrapper">
+        <table class="menu-table">
+          <thead>
+            <tr><th>Category</th><th>Example Items</th><th>Price Range (approx.)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chicken Meals</td><td>¼ Chicken, ½ Chicken, Whole Chicken, Boneless</td><td>£4 – £13</td></tr>
+            <tr><td>Burgers</td><td>Chicken Burger, Double Chicken Burger, Cheese addition</td><td>£6 – £10</td></tr>
+            <tr><td>Wraps & Pittas</td><td>Grilled Chicken Wrap, Pitta Meal</td><td>£5 – £9</td></tr>
+            <tr><td>Wings</td><td>PERi-PERi Wings (6, 12, 20 pieces)</td><td>£3 – £8</td></tr>
+            <tr><td>Sides</td><td>PERi Chips, Spicy Rice, Garlic Bread, Corn, Halloumi</td><td>£2 – £4</td></tr>
+            <tr><td>Desserts</td><td>Chocolate Brownie, Cheesecake, Ice Cream</td><td>£2 – £5</td></tr>
+            <tr><td>Drinks</td><td>Bottomless Soft Drink, Milkshake, Portuguese Soda</td><td>£2 – £3</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="lead-text">In halal branches, all chicken-based items (meals, burgers, wraps, wings) are prepared using halal-certified meat. The cooking method and PERi-PERi sauces remain identical to the original Nando’s recipe.</p>
+    </div>
+  </section>
+
+  <!-- Common halal items (popular list) + SECOND LINK -->
+  <section class="section section-light">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-star"></i> POPULAR HALAL ITEMS</span>
+      <h2>What you can order at halal Nando’s</h2>
+      <ul class="items-grid">
+        <li>Quarter Chicken with PERi-PERi sauce</li>
+        <li>Half Chicken Meal</li>
+        <li>Whole Chicken Sharing Platter</li>
+        <li>Chicken Butterfly Burger</li>
+        <li>Grilled Chicken Wrap</li>
+        <li>PERi-PERi Wings (6/12/20 pcs)</li>
+        <li>Spicy Rice</li>
+        <li>PERi Chips</li>
+        <li>Garlic Bread</li>
+        <li>Halloumi Sticks</li>
+        <li>Creamy Coleslaw</li>
+        <li>Chocolate Brownie</li>
+        <li>Bottomless Soft Drinks</li>
+      </ul>
+      <p class="lead-text" style="margin-top: 1rem;">For a deeper dive into halal-certified options, limited offers and branch updates: <strong>explore the complete halal Nando’s resource:</strong> <a href="https://nandos-menus-a99ec1.gitlab.io/" target="_blank" rel="noopener" class="inline-link">Nando’s halal menu & guides</a> – designed to help you find your nearest halal-friendly restaurant.</p>
+    </div>
+  </section>
+
+  <!-- Difference between halal and regular Nando’s -->
+  <section class="section section-white">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-balance-scale"></i> HALAL VS REGULAR</span>
+      <h2>Key differences – what stays the same?</h2>
+      <div class="card-grid">
+        <div class="info-card"><div class="card-icon"><i class="fas fa-drumstick-bite"></i></div><h3>Same flame-grilled chicken</h3><p>Halal branches use the same cooking technique, marinade and PERi-PERi flavour profile.</p></div>
+        <div class="info-card"><div class="card-icon"><i class="fas fa-pepper-hot"></i></div><h3>All spice levels available</h3><p>Lemon & Herb, Mild, Medium, Hot, Extra Hot – full range offered.</p></div>
+        <div class="info-card"><div class="card-icon"><i class="fas fa-fries"></i></div><h3>Identical sides & desserts</h3><p>Chips, spicy rice, garlic bread, coleslaw, brownie – all unchanged.</p></div>
+      </div>
+      <p>The only difference is the halal certification of the chicken meat. Vegetarian items, sauces, sides and desserts are already suitable. This allows Muslim customers to enjoy the exact same Nando’s experience.</p>
+    </div>
+  </section>
+
+  <!-- Why halal Nando’s is popular -->
+  <section class="section section-light">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-chart-line"></i> GROWING DEMAND</span>
+      <h2>Why halal Nando’s is a trusted choice</h2>
+      <p class="lead-text">The UK has seen a significant rise in demand for halal dining options. Nando’s halal branches provide a familiar, high-quality restaurant where families, students and professionals can dine without dietary concerns.</p>
+      <p>Consistency is another major factor – the same spicy, smoky flavour, the same fresh preparation, and the same casual atmosphere. Halal certification builds trust, while the ability to customise spice levels and sides makes every visit personal. For many, halal Nando’s is the go-to place for affordable, delicious flame-grilled meals.</p>
+    </div>
+  </section>
+
+  <!-- Dining experience -->
+  <section class="section section-white">
+    <div class="container">
+      <span class="eyebrow"><i class="fas fa-store"></i> DINING EXPERIENCE</span>
+      <h2>What to expect when you visit</h2>
+      <p>Halal Nando’s branches offer the same relaxed, modern and family-friendly environment. You can order at the counter, use digital kiosks, or order via app for takeaway. Food is cooked fresh after ordering, and bottomless drinks are available for dine-in customers. The staff are trained to answer any halal-related questions, so don’t hesitate to ask before ordering.</p>
+      <p>Most halal branches are located in busy urban centres, with ample seating and a vibrant atmosphere perfect for groups, casual lunches or dinner outings.</p>
+    </div>
+  </section>
+
+  <!-- Conclusion and CTA -->
+  <div class="cta-halal">
+    <div class="container">
+      <h2>Enjoy PERi-PERi chicken <em>the halal way</em></h2>
+      <p style="max-width: 580px; margin: 0 auto; opacity: 0.9;">Find your nearest halal-certified Nando’s and explore the full menu – from quarter chicken to sharing platters.</p>
+      <a href="https://nandosmenus.uk/halal-branches/" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-search-location"></i> Discover halal nandos near you</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><i class="fas fa-certificate"></i> Hala<span>Nando</span></div>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem;">Your independent guide to halal Nando’s in the UK – helping you enjoy flame-grilled PERi-PERi chicken with confidence.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <a href="#">Halal Chicken Meals</a>
+      <a href="#">Halal Burgers & Wraps</a>
+      <a href="#">Wings & Platters</a>
+      <a href="#">Sides & Desserts</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="https://nandosmenus.uk/halal-branches/" target="_blank">Halal Branches Guide</a>
+      <a href="https://nandos-menus-a99ec1.gitlab.io/" target="_blank">Nando’s Menu Archive</a>
+      <a href="#">Halal Certification FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Imprint</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+  <div class="copyright">
+    © 2026 HalaNando – Unofficial Halal Nando’s guide. Nando’s® is a registered trademark. Always confirm halal status with branch.
+  </div>
+</footer>
+</body>
+</html>
